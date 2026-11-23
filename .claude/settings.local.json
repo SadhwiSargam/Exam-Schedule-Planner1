@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk ls *)",
+      "PowerShell(Start-Sleep -Seconds 3; Invoke-RestMethod -Uri \"http://localhost:8000/\" -Method Get)",
+      "Bash(rtk curl *)",
+      "PowerShell(Stop-Process *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(rtk read *)",
+      "Bash(curl -s -o test.pdf http://localhost:8000/api/plans/3/schedule/export/pdf)",
+      "PowerShell(New-Item *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5175/)",
+      "Bash(curl -s http://localhost:5176/)",
+      "Bash(python *)",
+      "Bash(timeout 5 bash -c 'until curl -s http://127.0.0.1:8000/ >/dev/null 2>&1; do sleep 0.5; done && echo \"Server ready\"')",
+      "Bash(rtk pip *)",
+      "Bash(timeout 10 bash -c 'until curl -s http://127.0.0.1:8000/ >/dev/null 2>&1; do sleep 0.5; done && echo \"Server ready\"')",
+      "Bash(netstat -ano)",
+      "Bash(findstr :8000)",
+      "Bash(taskkill *)",
+      "Bash(timeout 15 bash -c 'until curl -s http://localhost:5176/ >/dev/null 2>&1; do sleep 0.5; done && echo \"Frontend ready\"')",
+      "Bash(rtk npm *)",
+      "Bash(timeout 20 bash -c 'until curl -s http://localhost:5176/ >/dev/null 2>&1; do sleep 0.5; done && echo \"Frontend ready\"')",
+      "Bash(rtk pytest *)"
+    ]
+  }
+}

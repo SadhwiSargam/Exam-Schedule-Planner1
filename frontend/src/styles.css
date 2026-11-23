@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { max-width: 1080px; margin: auto; padding: 28px 20px; }
+header { border-bottom: 1px solid #e0e6ef; padding-bottom: 18px; margin-bottom: 24px; }
+.eyebrow { font-size: 11px; letter-spacing: .13em; color: #69758a; font-weight: 700; text-transform: uppercase; }
+h1 { font-size: 29px; margin: 6px 0; font-weight: 700; }
+h2 { font-size: 19px; margin: 0 0 16px; font-weight: 600; }
+h3 { font-size: 15px; margin: 20px 0 8px; font-weight: 600; color: #3a4a6b; grid-column: 1 / -1; }
+p { color: #4b5a7a; line-height: 1.6; }
+.muted { color: #8b97ad; }
+.panel { background: white; border: 1px solid #e1e7ef; border-radius: 14px; padding: 22px; margin: 18px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.full { grid-column: 1 / -1; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; }
+input, select, textarea { font: inherit; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; width: 100%; background: white; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: #263b75; box-shadow: 0 0 0 3px rgba(38, 59, 117, 0.15); }
+input[type="checkbox"] { width: auto; }
+.check { flex-direction: row; align-items: center; gap: 8px; margin-top: 4px; }
+.check input { width: 16px; height: 16px; accent-color: #263b75; }
+button { border: 0; border-radius: 9px; padding: 11px 15px; background: #263b75; color: white; font-weight: 650; cursor: pointer; transition: background 0.15s; }
+button:hover:not(:disabled) { background: #1d2f5e; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+button.secondary { background: #eef2ff; color: #263b75; }
+button.secondary:hover:not(:disabled) { background: #dbe4fa; }
+button.danger { background: #fff1f2; color: #9f1239; }
+button.danger:hover:not(:disabled) { background: #ffe4e8; }
+button.small { padding: 7px 12px; font-size: 12px; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.subject { border: 1px solid #e5eaf2; border-radius: 10px; padding: 15px; margin: 12px 0; }
+.error { color: #b42318; background: #fff0f0; padding: 10px 12px; border-radius: 8px; margin-bottom: 12px; }
+.warning { color: #854d0e; background: #fffbeb; padding: 10px 12px; border-radius: 8px; margin-bottom: 12px; }
+.warning ul, .error ul { margin: 8px 0 0 18px; }
+.table-wrap { overflow: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid #e6eaf0; white-space: nowrap; }
+th { background: #f8fafc; font-weight: 600; color: #3a4a6b; }
+tr:hover td { background: #fafbfc; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+.badge.scheduled { background: #dcfce7; color: #166534; }
+.badge.manual { background: #e0e7ff; color: #3730a3; }
+.badge.conflict { background: #fee2e2; color: #991b1b; }
+.badge.cancelled { background: #f3f4f6; color: #4b5563; }
+
+.top-nav { background: white; border-bottom: 1px solid #e1e7ef; position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 1200px; margin: auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.nav-title { font-weight: 600; color: #3a4a6b; font-size: 14px; }
+.nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav-links button { padding: 7px 12px; font-size: 12px; border-radius: 6px; background: transparent; color: #4b5a7a; }
+.nav-links button:hover { background: #f0f3f8; }
+.nav-links button.active { background: #263b75; color: white; }
+.nav-links button.secondary { color: #263b75; }
+
+@media (max-width: 600px) {
+  .shell { padding: 18px 12px; }
+  .panel { padding: 16px; }
+  .grid { grid-template-columns: 1fr; }
+  .nav-links { width: 100%; justify-content: flex-start; }
+}
